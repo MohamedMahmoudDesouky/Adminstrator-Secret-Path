@@ -1,0 +1,31 @@
+  "repository": {
+        "repositoryArn": "arn:aws:ecr:us-west-2:584499610838:repository/payment-frontend",
+        "registryId": "584499610838",
+        "repositoryName": "payment-frontend",
+        "repositoryUri": "584499610838.dkr.ecr.us-west-2.amazonaws.com/payment-frontend",
+        "createdAt": "2026-01-27T14:57:19.682000+02:00",
+        "imageTagMutability": "MUTABLE",
+        "imageScanningConfiguration": {
+            "scanOnPush": false
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }
+    }
+
+{
+    "repository": {
+        "repositoryArn": "arn:aws:ecr:us-west-2:584499610838:repository/payment-backend",
+        "registryId": "584499610838",
+        "repositoryName": "payment-backend",
+        "repositoryUri": "584499610838.dkr.ecr.us-west-2.amazonaws.com/payment-backend",
+        "createdAt": "2026-01-27T14:57:22.233000+02:00",
+        "imageTagMutability": "MUTABLE",
+        "imageScanningConfiguration": {
+            "scanOnPush": false
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }
+    }
+}
