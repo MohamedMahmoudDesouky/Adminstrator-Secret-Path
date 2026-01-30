@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: payment
+data:
+  # Database host points to the PostgreSQL service in the same namespace
+  DB_HOST: postgres
+  DB_PORT: "5432"

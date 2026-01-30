@@ -1,0 +1,30 @@
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: payment-ingress
+#   namespace: payment
+#   annotations:
+#     kubernetes.io/ingress.class: alb
+#     alb.ingress.kubernetes.io/scheme: ip
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: payment-ingress
+  namespace: payment
+  annotations:
+    kubernetes.io/ingress.class: alb                   # Use AWS ALB Ingress Controller
+    alb.ingress.kubernetes.io/scheme: internet-facing # Expose to internet
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}'
+spec:
+  rules:
+  - host: payment.example.com   # Change to your real domain
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
